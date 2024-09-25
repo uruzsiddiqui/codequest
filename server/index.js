@@ -21,6 +21,9 @@ app.use(cors());
 app.use("/user", userRoutes);
 app.use("/questions", questionRoutes);
 app.use("/answer", answerRoutes);
+app.get("/", (req,res) => {
+  res.send("A2 is running perfectly");
+})
 
 const PORT = process.env.PORT || 5000;
 
